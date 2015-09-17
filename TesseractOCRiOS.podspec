@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.requires_arc            = true
   s.frameworks              = 'UIKit', 'Foundation'
   s.libraries               = 'z'
-  s.compiler_flags          = '-ENABLE_BITCODE=NO'
+  s.xcconfig                = { "ENABLE_BITCODE" => "NO" }
 
   s.ios.deployment_target   = "7.0"
   s.ios.vendored_library    = 'TesseractOCR/lib/*.a'
