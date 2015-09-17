@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
   s.requires_arc            = true
   s.frameworks              = 'UIKit', 'Foundation'
   s.libraries               = 'z'
-  s.xcconfig                = { "ENABLE_BITCODE" => "NO" }
 
   s.ios.deployment_target   = "7.0"
   s.ios.vendored_library    = 'TesseractOCR/lib/*.a'
   s.xcconfig                = { 'OTHER_LDFLAGS' => '-lstdc++ -weak_library /usr/lib/libstdc++.6.0.9.dylib',
-                                'CLANG_CXX_LIBRARY' => 'compiler-default' }
+                                'CLANG_CXX_LIBRARY' => 'compiler-default',
+                                'ENABLE_BITCODE' => 'NO'}
 
 end
